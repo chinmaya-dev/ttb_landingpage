@@ -387,6 +387,70 @@ h3 {
       font-size:30px;
       cursor: pointer;
   }
+
+  .parallaximg{
+  /* The image used */
+  background-image: url("img/pexels-photo-934062.jpeg");
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* Set a specific height */
+  min-height: 500px;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   
+}
+.parallaximg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.88);
+    /* z-index: 9; */
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 8px;
+  width: 155px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
   </style>
   <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
   <script type="text/javascript" src=" https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
@@ -530,41 +594,8 @@ h3 {
               </div>
               <!-- END row -->
               <div class="row">
-              <div class="col-md-6 probootstrap-gutter60">
-                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                      </ol>
-                  
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <img src="img/brandphoto.jpeg" alt="Los Angeles" style="width:100%;">
-                        </div>
-                  
-                        <div class="item">
-                          <img src="img/analytics.jpg" alt="Chicago" style="width:100%;">
-                        </div>
-                      
-                        <div class="item">
-                          <img src="img/travel.jpg" alt="New york" style="width:100%;">
-                        </div>
-                      </div>
-                  
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-               
+              <div class="col-md-6 probootstrap-gutter60 probootstrap-animate" data-animate-effect="fadeInRight">
+                <img src="img/youth-active-jump-happy-40815.jpeg" />
                 </div>
                 <div class="col-md-6 probootstrap-animate" data-animate-effect="fadeIn">
                     <div class="probootstrap-animate" data-animate-effect="fadeIn">
@@ -583,10 +614,15 @@ h3 {
         </section><!-- #more-features -->
 
         <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
-            <div class="container-fluid">
-               
+            <div class="container-fluid parallaximg">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate" data-animate-effect="fadeIn">
+                  <h2>SEAMLESS COMMUNICATIONS CHANNELS</h2>
+                  <h4>Get posts and creative promo contents faster by communicating with creators and their followers at once via private messaging, timelines posts and our blogging channel.</h4>
+                </div>
+              </div>
                 <!-- END row -->
-                <div class="row">
+                <!-- <div class="row">
                 <div class="col-md-6 probootstrap-gutter60">
                     <div class="probootstrap-animate" data-animate-effect="fadeIn">
                         <div class="row">
@@ -600,7 +636,7 @@ h3 {
                   <div class="col-md-6 probootstrap-animate" data-animate-effect="fadeIn">
                       <img src="img/socialimg.png" style="max-width:580px;max-height:600px;" />                     
                     </div>
-                  </div>
+                  </div> -->
                   </div>
           </section><!-- #more-features -->
         
@@ -845,70 +881,47 @@ h3 {
       </div>
     </section>       -->
     
-    <section class="probootstrap-section proboostrap-clients probootstrap-bg-white probootstrap-zindex-above-showcase">
-    <div class="bgimg-1">
-        <div class="caption">
-        <div class="caption_heading" style="text-align: center;">
-            <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">I am a Brand</a>
-        </div>
-          <div class="row" style="background-color: rgba(192,192,300,1); color: white;padding: 0 6px; margin-top: 15px; ">
-          <div class="col-lg-4 caption_text">
-            <h2 style="color: white;text-shadow: 1px 1px 4px black"><b>COLLABORATE AND ENGAGE WITH CREATORS</b></h2>
-                <p style="text-shadow: 0px 0px 1px black; font-size: 16px; text-align: justify;">TheTribalBox one stop platform empowers and enables creators to get heard, connect and obtain support from our community of brands and followers. 
-      
-                Now Brands can engage with creators on our platform. Sign up creators, get product reviews, look for events and endorsements, commision new briefs and stories. </p>
+    <section class="forbrand" style="display:block;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <div class="forbrand_main">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="tab" role="tabpanel">
+                                  <!-- Nav tabs -->
+                                  <ul class="nav nav-tabs" role="tablist">
+                                      <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab" style="color:white;"><i class="fa fa-globe"></i> Brand</a></li>
+                                      <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab" style="color:white;"><i class="fa fa-rocket"></i> Creator</a></li>
+                                  </ul>
+                                  <!-- Tab panes -->
+                                  <div class="tab-content tabs">
+                                      <div role="tabpanel" class="tab-pane fade in active" id="Section1" style="color:white;">
+                                          <h3 style="color:white;">I am a Brand</h3>
+                                          <p>Our data driven insights helps you find the right audience and optimised reach based on demography, social economics and psychometrics  for your campaigns. 
+                                            
+                                            Are you brand looking to promote your product and services? Are you creators looking to engage with your followers and need help and support ? 
+                                            
+                                            TheTribalBox one stop platform enables you to run your customised campaign for your needs.
+                                            </p>
+                                          <button class="button" style="vertical-align:middle"><span>Login as Brand</span></button>
+                                        </div>
+                        
+                                      <div role="tabpanel" class="tab-pane fade" id="Section2" style="color:white;">
+                                          <h3 style="color:white;">I am a Creator</h3>
+                                          <p>The TribalBox one stop platform empowers and enables creators to get heard, connect and obtain support from our community of brands and followers. Now Brands can engage with creators on our platform. Sign up creators, get product reviews, look for events and endorsements, commision new briefs and stories.</p>
+                                          <p>Back our creators to fund their needs, buy equipment, sportswear and cover coaching, event hosting, learning, training and travelling expenses. Discover our secure, flexible, easy to use crowdfunding feature and get rewarded from crowdfunding campaign owners.</p>
+                                      <button class="button" style="vertical-align:middle"><span>Login as Creator</span></button>                                                                                     
+                                        </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    
           </div>
-            <div class="col-lg-4 caption_text">
-            <h2 style="color: white;text-shadow: 1px 1px 4px black"><b>RUN HIGH-PITCHED CAMPAIGNS</b></h2> 
-              <p style="text-shadow: 0px 0px 1px black; font-size: 16px; text-align: justify;">Our data driven insights helps you find the right audience and optimised reach based on demography, social economics and psychometrics  for your campaigns. 
-      
-              Are you brand looking to promote your product and services? Are you creators looking to engage with your followers and need help and support ? 
-      
-              TheTribalBox one stop platform enables you to run your customised campaign for your needs.</p>
-            </div>
-            <div class="col-lg-4 caption_text"><h2 style="color: white;text-shadow: 1px 1px 4px black"><b>REPORTING</b></h2>
-              <p style="text-shadow: 0px 0px 1px black; font-size: 16px; text-align: justify;">Implement our Live Tracking and API integration features to measure the success of your influencers in real-time.</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      
-      <div class="bgimg-2">
-        <div class="caption">
-        <div class="caption_heading" style="text-align: center;">
-            <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">I am a Creator</a></div>
-          <div class="row" style="background-color: rgba(204, 133, 0,0.5); color: white;padding: 0 6px; margin-top: 15px; ">
-          <div class="col-lg-4 caption_text">
-            <h2 style="color: white;text-shadow: 1px 1px 4px black"><b>FIND SPONSORSHIPS 
-      </b></h2>
-                <p style="text-shadow: 0px 0px 1px black; font-size: 16px; text-align: justify;">TheTribalBox one stop platform connects creators and brands together to match sponsorship needs based on data and analytics tools. 
-      
-      Sponsorship Workflows driven by advanced analytics helps creators to find brands who can sponsor them and at same time allows brands to choose creators based on deep insights and exclusive data and social media contents.
-       </p>
-          </div>
-            <div class="col-lg-4 caption_text">
-            <h2 style="color: white;text-shadow: 1px 1px 4px black"><b>CROWDFUND CREATORS AND GET REWARDED</b></h2> 
-              <p style="text-shadow: 0px 0px 1px black; font-size: 16px; text-align: justify;">Back our creators to fund their needs, buy equipment, sportswear and cover coaching, event hosting, learning, training and travelling expenses. 
-      
-      Discover our secure, flexible, easy to use crowdfunding feature and get rewarded from crowdfunding campaign owners.
-      </p>
-            </div>
-            <div class="col-lg-4 caption_text"><h2 style="color: white;text-shadow: 1px 1px 4px black"><b>STRENGTHEN YOUR PROFILE</b></h2>
-              <p style="text-shadow: 0px 0px 1px black; font-size: 16px; text-align: justify;">Create an account and flaunt your marketing skills before numerous brands by creating an outstanding profile of yourself. Get bigger and better opportunities with brands by boosting your profile.</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      
-      <div style="position:relative;">
-        <div style="background-color:white;text-align:center;padding:50px 80px;text-align: center;letter-spacing: 2px;">
-        <p style=" font-size: 25px; color:black;"><b>INSPIRING CREATOR STORIES</b> </p><p>
-      TheTribalBox ignites passion in young minds, showcase their talent and help them to achieve their life dreams. We brings untold stories of extraordinary talent from creators by creating captivating, creative, original and high-quality professional media contents.
-      
-      Now followers can communicate to creators, watch, like, share, comment on inspiring stories, become aspiring creators and search for mentorship and information.
-      </p>
         </div>
       </div>
     </section>
